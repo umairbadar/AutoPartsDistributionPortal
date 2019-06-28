@@ -76,7 +76,8 @@ public class Adapter_My_Product extends RecyclerView.Adapter<Adapter_My_Product.
                 Fragment fragment = new Fragment_Assign_My_Product();
                 Bundle args = new Bundle();
                 args.putString("product_name", items.getP_name());
-                args.putString("product_id", items.getP_id());
+                args.putString("p_id", items.getP_id());
+                args.putString("product_id", items.getProduct_id());
                 fragment.setArguments(args);
                 FragmentTransaction ft = activity.getSupportFragmentManager().beginTransaction();
                 ft.replace(R.id.content_main,fragment);

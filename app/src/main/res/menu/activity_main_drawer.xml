@@ -19,6 +19,10 @@
             android:icon="@drawable/addaddress"
             android:title="Add Address" />
         <item
+            android:id="@+id/change_password"
+            android:icon="@drawable/password"
+            android:title="Change Password" />
+        <item
             android:id="@+id/employee"
             android:icon="@drawable/ic_employee"
             android:title="Employee" />
@@ -28,17 +32,13 @@
             android:title="Employee Designation"--> />
 
         <item
-            android:id="@+id/change_password"
-            android:icon="@drawable/password"
-            android:title="Change Password" />
-        <item
             android:id="@+id/vehilce"
-            android:icon="@drawable/ic_directions_car_black_24dp"
+            android:icon="@drawable/ic_truck"
             android:title="Vehicle" />
 
         <item
             android:id="@+id/product_holder"
-            android:icon="@drawable/ic_directions_car_black_24dp"
+            android:icon="@drawable/ic_detective"
             android:title="Product Holder" />
 
         <item
@@ -47,16 +47,22 @@
             android:title="My Product" />
 
         <item
-            android:id="@+id/my_order"
-            android:icon="@drawable/order"
-            android:title="My Order" />
+            android:id="@+id/assign_order"
+            android:icon="@drawable/ic_cart"
+            android:title="Assign Order" />
+
+        <item
+            android:id="@+id/check_product_agent"
+            android:icon="@drawable/ic_manager"
+            android:title="Check Product Agent" />
+
         <item
             android:id="@+id/my_transaction"
-            android:icon="@drawable/transaction"
-            android:title="My Transactions" />
+            android:icon="@drawable/ic_dollar"
+            android:title="Transactions" />
         <item
             android:id="@+id/logout"
-            android:icon="@drawable/logout"
+            android:icon="@drawable/ic_logout"
             android:title="Logout" />
 
     </group>

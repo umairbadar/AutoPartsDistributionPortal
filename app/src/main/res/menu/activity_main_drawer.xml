@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group
+        android:id="@+id/top"
+        android:checkableBehavior="single">
+        <item
+            android:id="@+id/dashboard"
+            android:icon="@drawable/dash"
+            android:title="Dashboard" />
+        <item
+            android:id="@+id/edit_accounts"
+            android:icon="@drawable/edit"
+            android:title="Edit Accounts" />
+        <item
+            android:id="@+id/add_address"
+            android:icon="@drawable/addaddress"
+            android:title="Add Address" />
+        <item
+            android:id="@+id/employee"
+            android:icon="@drawable/ic_employee"
+            android:title="Employee" />
+        <!--<item
+            android:id="@+id/employee_designation"
+            android:icon="@drawable/addaddress"
+            android:title="Employee Designation"--> />
+
+        <item
+            android:id="@+id/change_password"
+            android:icon="@drawable/password"
+            android:title="Change Password" />
+        <item
+            android:id="@+id/vehilce"
+            android:icon="@drawable/ic_directions_car_black_24dp"
+            android:title="Vehicle" />
+
+        <item
+            android:id="@+id/product_holder"
+            android:icon="@drawable/ic_directions_car_black_24dp"
+            android:title="Product Holder" />
+
+        <item
+            android:id="@+id/my_product"
+            android:icon="@drawable/ic_my_product"
+            android:title="My Product" />
+
+        <item
+            android:id="@+id/my_order"
+            android:icon="@drawable/order"
+            android:title="My Order" />
+        <item
+            android:id="@+id/my_transaction"
+            android:icon="@drawable/transaction"
+            android:title="My Transactions" />
+        <item
+            android:id="@+id/logout"
+            android:icon="@drawable/logout"
+            android:title="Logout" />
+
+    </group>
+</menu>

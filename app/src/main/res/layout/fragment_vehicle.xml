@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/orangebackgroundbutton"
+    android:orientation="vertical">
+
+    <Button
+        android:id="@+id/btn_add_new"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="5dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="10dp"
+        android:background="#1a9a55"
+        android:drawableLeft="@drawable/ic_add"
+        android:drawablePadding="5dp"
+        android:padding="5dp"
+        android:text="Add New"
+        android:textColor="#FFFFFF" />
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/vehicle_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+
+</LinearLayout>

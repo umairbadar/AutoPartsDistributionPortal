@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/orangebackgroundbutton"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="My Product"
+        android:textColor="@color/white"
+        android:padding="10dp"
+        android:textSize="24sp"
+        android:typeface="serif"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="10dp"
+        android:drawableLeft="@drawable/ic_my_product"
+        android:drawablePadding="4dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/my_product_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+</LinearLayout>

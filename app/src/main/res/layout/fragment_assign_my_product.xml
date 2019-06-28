@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/orangebackgroundbutton"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:drawableLeft="@drawable/ic_add_black_24dp"
+        android:drawablePadding="4dp"
+        android:padding="10dp"
+        android:text="Assign Product Agent"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:typeface="serif" />
+
+    <TextView
+        android:id="@+id/tv_product_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:padding="10dp"
+        android:text="Product Name: AT51"
+        android:textColor="@color/blackie"
+        android:textSize="15sp" />
+
+    <Spinner
+        android:id="@+id/spn_product_holder"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp" />
+
+    <EditText
+        android:id="@+id/et_quantity"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:hint="Enter Quantity"
+        android:textColor="@color/blackie"
+        android:inputType="number"/>
+
+    <Spinner
+        android:id="@+id/spn_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp" />
+
+    <Button
+        android:id="@+id/btn_assigned"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_marginRight="15dp"
+        android:text="Assigned"
+        android:background="@drawable/green_background"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

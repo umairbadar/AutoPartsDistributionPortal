@@ -134,12 +134,18 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             ft.replace(R.id.content_main, fragment);
             ft.addToBackStack(null);
             ft.commit();
-        } else if (id == R.id.my_order) {
+        } else if (id == R.id.assign_order) {
             fragment = new Fragment_MyOrders();
             ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_main, fragment);
             ft.addToBackStack(null);
             ft.commit();
+        } else if (id == R.id.check_product_agent) {
+            /*fragment = new Fragment_MyOrders();
+            ft = getSupportFragmentManager().beginTransaction();
+            ft.replace(R.id.content_main, fragment);
+            ft.addToBackStack(null);
+            ft.commit();*/
         } else if (id == R.id.my_transaction) {
             fragment = new Fragment_Transactions();
             ft = getSupportFragmentManager().beginTransaction();

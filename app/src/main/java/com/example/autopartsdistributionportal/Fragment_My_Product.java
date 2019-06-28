@@ -85,7 +85,8 @@ public class Fragment_My_Product extends Fragment {
                                 JSONArray jsonArray = jsonObject.getJSONArray("products");
                                 for (int i = 0; i < jsonArray.length(); i++) {
                                     JSONObject object = jsonArray.getJSONObject(i);
-                                    String product_id = object.getString("id");
+                                    String p_id = object.getString("id");
+                                    String product_id = object.getString("product_id");
                                     String quantity = object.getString("quantity");
                                     String unit_price = object.getString("unit_price");
                                     String status = object.getString("status");
@@ -97,6 +98,7 @@ public class Fragment_My_Product extends Fragment {
                                         if (quantity.equals("null") && unit_price.equals("null")) {
 
                                             Model_My_Product items = new Model_My_Product(
+                                                    p_id,
                                                     product_id,
                                                     name,
                                                     image,
@@ -108,6 +110,7 @@ public class Fragment_My_Product extends Fragment {
                                         } if (quantity.equals("null")){
 
                                             Model_My_Product items = new Model_My_Product(
+                                                    p_id,
                                                     product_id,
                                                     name,
                                                     image,
@@ -119,6 +122,7 @@ public class Fragment_My_Product extends Fragment {
                                         } if (unit_price.equals("null")){
 
                                             Model_My_Product items = new Model_My_Product(
+                                                    p_id,
                                                     product_id,
                                                     name,
                                                     image,
@@ -129,6 +133,7 @@ public class Fragment_My_Product extends Fragment {
 
                                         } else {
                                             Model_My_Product items = new Model_My_Product(
+                                                    p_id,
                                                     product_id,
                                                     name,
                                                     image,
@@ -144,6 +149,7 @@ public class Fragment_My_Product extends Fragment {
                                         if (quantity.equals("null")) {
 
                                             Model_My_Product items = new Model_My_Product(
+                                                    p_id,
                                                     product_id,
                                                     name,
                                                     image,
@@ -154,6 +160,7 @@ public class Fragment_My_Product extends Fragment {
                                             arr_list.add(items);
                                         } else {
                                             Model_My_Product items = new Model_My_Product(
+                                                    p_id,
                                                     product_id,
                                                     name,
                                                     image,

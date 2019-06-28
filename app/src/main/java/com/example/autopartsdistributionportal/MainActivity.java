@@ -141,11 +141,11 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             ft.addToBackStack(null);
             ft.commit();
         } else if (id == R.id.check_product_agent) {
-            /*fragment = new Fragment_MyOrders();
+            fragment = new Fragment_CheckProductAgent();
             ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_main, fragment);
             ft.addToBackStack(null);
-            ft.commit();*/
+            ft.commit();
         } else if (id == R.id.my_transaction) {
             fragment = new Fragment_Transactions();
             ft = getSupportFragmentManager().beginTransaction();

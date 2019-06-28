@@ -54,7 +54,7 @@
         <item
             android:id="@+id/check_product_agent"
             android:icon="@drawable/ic_manager"
-            android:title="Check Product Agent" />
+            android:title="Check Agent Product" />
 
         <item
             android:id="@+id/my_transaction"

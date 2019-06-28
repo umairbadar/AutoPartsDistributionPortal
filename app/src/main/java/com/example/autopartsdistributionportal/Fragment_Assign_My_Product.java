@@ -41,7 +41,7 @@ import cn.pedant.SweetAlert.SweetAlertDialog;
 public class Fragment_Assign_My_Product extends Fragment {
 
     private SharedPreferences sharedPreferences;
-    private String p_name,p_id, status_id, customer_id,product_holder_id;
+    private String p_name,p_id,product_id, status_id, customer_id,product_holder_id;
     private TextView tv_product_name;
     private EditText et_quantity;
     private Button btn_assigned;
@@ -70,7 +70,8 @@ public class Fragment_Assign_My_Product extends Fragment {
         if (getArguments() != null) {
 
             p_name = getArguments().getString("product_name");
-            p_id = getArguments().getString("product_id");
+            p_id = getArguments().getString("p_id");
+            product_id = getArguments().getString("product_id");
         }
 
         tv_product_name = view.findViewById(R.id.tv_product_name);
@@ -235,6 +236,7 @@ public class Fragment_Assign_My_Product extends Fragment {
                 Map<String, String> map = new HashMap<String, String>();
                 map.put("product_agent_id", product_holder_id);
                 map.put("supplier_product_id", p_id);
+                map.put("product_id", product_id);
                 map.put("quantity", et_quantity.getText().toString().trim());
                 map.put("status", status_id);
                 return map;

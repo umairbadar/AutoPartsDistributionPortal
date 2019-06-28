@@ -192,7 +192,7 @@ public class Fragment_Assign_My_Product extends Fragment {
 
     public void postProductHolder(){
 
-        Toast.makeText(getContext(),product_holder_id + " " + p_id, Toast.LENGTH_LONG).show();
+        //Toast.makeText(getContext(),product_holder_id + " " + p_id, Toast.LENGTH_LONG).show();
 
         progressDialog = new SweetAlertDialog(getContext(), SweetAlertDialog.PROGRESS_TYPE);
         progressDialog.getProgressHelper().setBarColor(Color.parseColor("#A5DC86"));

@@ -95,5 +95,6 @@ public class Fragment_MyOrderDetails extends Fragment {
                 });
         RequestQueue requestQueue = Volley.newRequestQueue(getContext());
         requestQueue.add(req);
+
     }
 }

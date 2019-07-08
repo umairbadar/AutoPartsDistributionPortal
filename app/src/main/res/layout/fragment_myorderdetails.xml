@@ -1,53 +1,60 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="wrap_content">
-    <android.support.v7.widget.RecyclerView
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:weightSum="3">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Product Name"
+            android:background="#32C2CD"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:textSize="14sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Quantity"
+            android:background="#32C2CD"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:textSize="14sp"
+            android:gravity="center"/>
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Unit Price"
+            android:background="#32C2CD"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:textSize="14sp"
+            android:gravity="center"/>
+
+    </LinearLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="15dp"
+        android:layout_marginLeft="15dp">
 
     </android.support.v7.widget.RecyclerView>
-
-    <TextView
-        android:layout_marginTop="30dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Sub Total Amount:"
-        android:gravity="right"
-        android:layout_marginRight="80dp"
-        />
-    <TextView
-        android:layout_marginTop="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="GST Tax:"
-        android:gravity="right"
-        android:layout_marginRight="80dp"
-        />
-    <TextView
-        android:layout_marginTop="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="VAT Tax:"
-        android:gravity="right"
-        android:layout_marginRight="80dp"
-        />
-    <TextView
-        android:layout_marginTop="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="CES Tax:"
-        android:gravity="right"
-        android:layout_marginRight="80dp"
-        />
-    <TextView
-        android:layout_marginTop="15dp"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Total Amount:"
-        android:gravity="right"
-        android:layout_marginRight="80dp"
-        />
 
 </LinearLayout>

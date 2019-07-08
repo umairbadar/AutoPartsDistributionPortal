@@ -71,12 +71,12 @@ public class Fragment_Product_Holder extends Fragment {
             public void onClick(View view) {
                 Fragment fragment = new Fragment_Add_Product_Holder();
                 FragmentTransaction ft = getActivity().getSupportFragmentManager().beginTransaction();
-                Bundle args = new Bundle();
+                /*Bundle args = new Bundle();
                 args.putString("condition", "add");
                 args.putString("type_id", "4");
                 args.putString("group_id", "0");
                 args.putString("status_id", "0");
-                fragment.setArguments(args);
+                fragment.setArguments(args);*/
                 ft.replace(R.id.content_main, fragment);
                 ft.addToBackStack(null);
                 ft.commit();

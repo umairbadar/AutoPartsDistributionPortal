@@ -58,6 +58,10 @@ public class Adapter_Product_Holder extends RecyclerView.Adapter<Adapter_Product
                 args.putString("type_id", item.getCustomer_type_id());
                 args.putString("group_id", item.getCustomer_group_id());
                 args.putString("status_id", item.getStatus_id());
+                args.putString("name", item.getProduct_holder());
+                args.putString("email", item.getEmail());
+                args.putString("phone", item.getCell_phone());
+                args.putString("nic", item.getNic());
                 fragment.setArguments(args);
                 FragmentTransaction ft = activity.getSupportFragmentManager().beginTransaction();
                 ft.replace(R.id.content_main,fragment);

@@ -123,7 +123,7 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             ft.addToBackStack(null);
             ft.commit();
         } else if (id == R.id.product_holder) {
-            fragment = new Fragment_Vehicle_Type();
+            fragment = new Fragment_Product_Holder();
             ft = getSupportFragmentManager().beginTransaction();
             ft.replace(R.id.content_main, fragment);
             ft.addToBackStack(null);

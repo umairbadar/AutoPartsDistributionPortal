@@ -3,6 +3,7 @@ package com.example.autopartsdistributionportal;
 import java.util.List;
 
 public class Model_MyOrderDetails {
+
     private String product_name;
     private String quantity;
     private String unitprice;
@@ -17,12 +18,11 @@ public class Model_MyOrderDetails {
         return product_name;
     }
 
-    public String getQuantity()
-    {
+    public String getQuantity() {
         return quantity;
     }
-    public String getUnitprice()
-    {
+
+    public String getUnitprice() {
         return unitprice;
     }
 

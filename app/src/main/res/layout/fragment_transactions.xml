@@ -2,7 +2,76 @@
 <LinearLayout
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@drawable/orangebackgroundbutton"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:drawableLeft="@drawable/ic_money"
+        android:drawablePadding="4dp"
+        android:padding="10dp"
+        android:text="Kumho Transactions"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:typeface="serif" />
+
+
+    <TextView
+        android:id="@+id/tv_balance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:drawableLeft="@drawable/ic_dollar"
+        android:drawablePadding="4dp"
+        android:padding="10dp"
+        android:text="Rs. 64700"
+        android:gravity="end"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:typeface="serif" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Total Balance"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:paddingRight="10dp"
+        android:gravity="end"
+        android:textColor="@color/white"
+        android:typeface="serif" />
+
+    <Spinner
+        android:id="@+id/spn_condition"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerviewBank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerviewCustomer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"/>
 
 
 </LinearLayout>

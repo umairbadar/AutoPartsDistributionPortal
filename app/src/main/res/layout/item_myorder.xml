@@ -1,242 +1,343 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    android:layout_margin="8dp"
     android:orientation="vertical">
 
     <android.support.v7.widget.CardView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp">
+        app:cardElevation="5dp">
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:weightSum="2">
+            android:orientation="vertical">
 
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="3dp"
-                android:layout_weight="1"
-                android:text="Order Reference:"
-                android:textSize="18sp"
-                android:typeface="serif" />
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-            <TextView
-                android:id="@+id/orderreference"
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Order Reference"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    android:paddingLeft="8dp"/>
+
+                <TextView
+                    android:id="@+id/tv_orderRef"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Order Reference"
+                    android:textSize="22sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-        </LinearLayout>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Customer Name"
+                    android:textSize="16sp"
+                    android:paddingLeft="8dp"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:orientation="horizontal"
-            android:weightSum="2">
+                <TextView
+                    android:id="@+id/tv_customerName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Customer Name"
+                    android:textSize="16sp" />
 
-            <TextView
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="3dp"
-                android:layout_weight="1"
-                android:text="Customer Name:"
-                android:textSize="18sp"
-                android:typeface="serif" />
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-            <TextView
-                android:id="@+id/customername"
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Delivery Date"
+                    android:textSize="16sp"
+                    android:paddingLeft="8dp"/>
+
+                <TextView
+                    android:id="@+id/tv_deliveryDate"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Delivery Date"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
-        </LinearLayout>
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="60dp"
-            android:orientation="horizontal"
-            android:weightSum="2">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Priority"
+                    android:textSize="16sp"
+                    android:paddingLeft="8dp"/>
 
-            <TextView
+                <TextView
+                    android:id="@+id/tv_priority"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Priority"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="3dp"
-                android:layout_weight="1"
-                android:text="Delivery Date:"
-                android:textSize="18sp"
-                android:typeface="serif" />
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-            <TextView
-                android:id="@+id/deliverydate"
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Status"
+                    android:textSize="16sp"
+                    android:paddingLeft="8dp"/>
+
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Status"
+                    android:textSize="16sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
-        </LinearLayout>
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="90dp"
-            android:orientation="horizontal"
-            android:weightSum="2">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Order Details"
+                    android:textSize="16sp"
+                    android:paddingLeft="8dp"/>
 
-            <TextView
+                <Button
+                    android:id="@+id/btn_view"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:background="#f0ad4e"
+                    android:text="View"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:layout_marginRight="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="3dp"
-                android:layout_weight="1"
-                android:text="Priority:"
-                android:textSize="18sp"
-                android:typeface="serif" />
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-            <TextView
-                android:id="@+id/priority"
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Delivery Address"
+                    android:textSize="16sp"
+                    android:paddingLeft="8dp"/>
+
+                <TextView
+                    android:id="@+id/tv_deliveryAddress"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:background="#5bc0de"
+                    android:drawablePadding="5dp"
+                    android:gravity="center"
+                    android:text="Delivery Address"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:layout_marginRight="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
-        </LinearLayout>
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="120dp"
-            android:orientation="horizontal"
-            android:weightSum="2">
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Assign Work Order"
+                    android:textSize="16sp"
+                    android:paddingLeft="8dp"/>
 
-            <TextView
+                <Button
+                    android:id="@+id/btn_assignWorkOrder"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:background="#5bc0de"
+                    android:text="Assign Employee"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:layout_marginRight="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="3dp"
-                android:layout_weight="1"
-                android:text="Invoice:"
-                android:textSize="18sp"
-                android:typeface="serif" />
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-            <Button
-                android:id="@+id/invoice"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/orangebackgroundbutton"
-                android:text="View Invoice"
-                android:textColor="#fff"
-                android:typeface="serif" />
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Inventory Out"
+                    android:textSize="16sp"
+                    android:paddingLeft="8dp"/>
 
-        </LinearLayout>
+                <Button
+                    android:id="@+id/btn_inventoryOut"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:background="#d9534f"
+                    android:text="Assign Work Order"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:layout_marginRight="5dp"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="150dp"
-            android:orientation="horizontal"
-            android:weightSum="2">
+            </LinearLayout>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="3dp"
-                android:layout_weight="1"
-                android:text="Gate Pass In:"
-                android:textSize="18sp"
-                android:typeface="serif" />
-
-            <Button
-                android:id="@+id/gatepassin"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/orangebackgroundbutton"
-                android:text="Gate Pass In"
-                android:textColor="#fff"
-                android:typeface="serif" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="180dp"
-            android:orientation="horizontal"
-            android:weightSum="2">
-
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="3dp"
-                android:layout_weight="1"
-                android:text="Gate Pass Out:"
-                android:textSize="18sp"
-                android:typeface="serif" />
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-            <Button
-                android:id="@+id/gatepassout"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/orangebackgroundbutton"
-                android:text="Gate Pass Out"
-                android:textColor="#fff"
-                android:typeface="serif" />
-        </LinearLayout>
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Gate Pass Out"
+                    android:textSize="16sp"
+                    android:paddingLeft="8dp"/>
 
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="210dp"
-            android:orientation="horizontal"
-            android:weightSum="2">
+                <Button
+                    android:id="@+id/btn_gatePassOut"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:background="#d9534f"
+                    android:text="Assign Work Order"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:layout_marginRight="5dp"/>
 
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="3dp"
-                android:layout_weight="1"
-                android:text="Delivery Note:"
-                android:textSize="18sp"
-                android:typeface="serif" />
+            </LinearLayout>
 
-            <Button
-                android:id="@+id/deliverynote"
-                android:layout_width="match_parent"
-                android:layout_height="30dp"
-                android:layout_marginRight="5dp"
-                android:layout_weight="1"
-                android:background="@drawable/orangebackgroundbutton"
-                android:text="Delivery Order"
-                android:textColor="#fff"
-                android:typeface="serif" />
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="240dp"
-            android:orientation="horizontal"
-            android:weightSum="2">
-
-            <TextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_marginLeft="3dp"
-                android:layout_weight="1"
-                android:text="Status:"
-                android:textSize="18sp"
-                android:typeface="serif" />
+                android:orientation="horizontal"
+                android:weightSum="2">
 
-            <TextView
-                android:id="@+id/statusmyorder"
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Delivery Note"
+                    android:textSize="16sp"
+                    android:paddingLeft="8dp"/>
+
+                <Button
+                    android:id="@+id/btn_deliveryNote"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:background="#d9534f"
+                    android:text="Assign Work Order"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:layout_marginRight="5dp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_weight="1" />
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Action"
+                    android:textSize="16sp"
+                    android:paddingLeft="8dp"/>
+
+                <Button
+                    android:id="@+id/btn_action"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:layout_weight="1"
+                    android:background="#d9534f"
+                    android:text="Generate Delivery Note"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:layout_marginRight="5dp"
+                    android:enabled="false"/>
+
+            </LinearLayout>
+
         </LinearLayout>
 
     </android.support.v7.widget.CardView>

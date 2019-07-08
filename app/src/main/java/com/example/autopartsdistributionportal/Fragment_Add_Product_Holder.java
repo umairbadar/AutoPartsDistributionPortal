@@ -286,6 +286,11 @@ public class Fragment_Add_Product_Holder extends Fragment {
 
                             if (getArguments() != null) {
 
+                                et_name.setText(getArguments().getString("name"));
+                                et_email.setText(getArguments().getString("email"));
+                                et_phone.setText(getArguments().getString("phone"));
+                                et_nic.setText(getArguments().getString("nic"));
+
                                 condition = getArguments().getString("condition");
 
                                 type_id = getArguments().getString("type_id");

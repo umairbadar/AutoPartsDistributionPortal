@@ -2,16 +2,22 @@ package com.example.autopartsdistributionportal;
 
 public class Model_Customer {
 
+    private String order_id;
     private String order_ref;
     private String total_amount;
     private String delivery_date;
     private String status;
 
-    public Model_Customer(String order_ref, String total_amount, String delivery_date, String status) {
+    public Model_Customer(String order_id, String order_ref, String total_amount, String delivery_date, String status) {
         this.order_ref = order_ref;
         this.total_amount = total_amount;
         this.delivery_date = delivery_date;
         this.status = status;
+        this.order_id = order_id;
+    }
+
+    public String getOrder_id() {
+        return order_id;
     }
 
     public String getStatus() {

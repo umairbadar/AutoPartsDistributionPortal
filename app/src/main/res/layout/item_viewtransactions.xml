@@ -26,50 +26,49 @@
                 android:textSize="18dp" />
 
             <TextView
-                android:id="@+id/tv_totalAmount"
+                android:id="@+id/tv_previousBalance"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:text="Total Amount: "
+                android:text="Previous Balance: "
                 android:textSize="18dp" />
 
             <TextView
-                android:id="@+id/tv_deliveryDate"
+                android:id="@+id/tv_addedAmount"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
                 android:layout_marginRight="15dp"
-                android:text="Delivery Date: "
+                android:text="Added Amount: "
                 android:textSize="18dp" />
 
             <TextView
-                android:id="@+id/tv_view_details"
+                android:id="@+id/tv_updatedBalance"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginRight="15dp"
-                android:background="#337ab7"
-                android:clickable="true"
-                android:gravity="center"
-                android:text="View Details"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:text="Updated Balance: "
+                android:textSize="18dp" />
 
             <TextView
-                android:id="@+id/tv_payment"
+                android:id="@+id/tv_paymentMethod"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="15dp"
-                android:layout_marginTop="10dp"
                 android:layout_marginRight="15dp"
-                android:background="#d9534f"
-                android:clickable="true"
-                android:gravity="center"
-                android:text="Payment Pending"
-                android:textColor="@color/white"
-                android:textSize="18sp" />
+                android:text="Payment Method: "
+                android:textSize="18dp" />
+
+            <TextView
+                android:id="@+id/tv_paymentMode"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:text="Payment Mode: "
+                android:textSize="18dp" />
 
 
         </LinearLayout>

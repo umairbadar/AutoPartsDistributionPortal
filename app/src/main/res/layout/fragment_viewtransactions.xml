@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" 
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/orangebackgroundbutton"
+    android:orientation="vertical">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:drawablePadding="4dp"
+        android:padding="10dp"
+        android:text="Customer Order Transaction"
+        android:textColor="@color/white"
+        android:textSize="24sp"
+        android:typeface="serif" />
+    
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/recyclerViewTransactions"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"/>
+
+
+    <TextView
+        android:id="@+id/tv_error"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginRight="15dp"
+        android:drawablePadding="4dp"
+        android:padding="10dp"
+        android:text="No Data Avaiable"
+        android:textColor="#cac8c8"
+        android:textSize="20sp"
+        android:typeface="serif"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:visibility="gone"/>
+
+</LinearLayout>

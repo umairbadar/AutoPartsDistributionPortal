@@ -35,8 +35,8 @@ import java.util.List;
 public class Fragment_Transactions extends Fragment {
 
     private SharedPreferences sharedPreferences;
-    private String username, created_by;
-    private TextView tv_head;
+    private String username;
+    private TextView tv_head, tv_balance;
     private Spinner spn_condition;
     private ArrayList<String> arr_condition;
     private RecyclerView recyclerViewBank, recyclerViewCustomer;
@@ -45,6 +45,7 @@ public class Fragment_Transactions extends Fragment {
     private List<Model_Customer> customer_list;
     private String discount_amount, status;
     private static DecimalFormat df2 = new DecimalFormat("#");
+    public static String created_by;
 
     @Nullable
     @Override
@@ -71,6 +72,8 @@ public class Fragment_Transactions extends Fragment {
         arr_condition.add("Customer Order");
         spn_condition.setAdapter(new ArrayAdapter<>(getContext(),
                 android.R.layout.simple_spinner_dropdown_item, arr_condition));
+        tv_balance = view.findViewById(R.id.tv_balance);
+        getAccountBalance();
 
         recyclerViewBank = view.findViewById(R.id.recyclerviewBank);
         recyclerViewBank.setLayoutManager(new LinearLayoutManager(getContext(),
@@ -169,28 +172,45 @@ public class Fragment_Transactions extends Fragment {
                             JSONArray jsonArray = jsonObject.getJSONArray("assign_orders");
                             for (int i = 0; i < jsonArray.length(); i++) {
                                 JSONObject object = jsonArray.getJSONObject(i);
+                                String order_id = object.getString("order_id");
                                 JSONObject innerObject = object.getJSONObject("find_order");
                                 String order_reference = innerObject.getString("order_reference");
                                 String sub_total_amount = innerObject.getString("sub_total_amount");
                                 String deliverydate = innerObject.getString("deliverydate");
 
+                                if (jsonObject.has("account") && !jsonObject.isNull("account")) {
+                                    JSONObject account = jsonObject.getJSONObject("account");
+                                    String account_id = account.getString("id");
 
-                                if (object.has("find_supplier_payment") && !object.isNull("find_supplier_payment")) {
-                                    JSONObject parent = object.getJSONObject("find_supplier_payment");
-                                    if (parent.isNull("status")) {
-                                        status = "null";
+                                    if (object.has("find_supplier_payment") && !object.isNull("find_supplier_payment")) {
+                                        JSONObject parent = object.getJSONObject("find_supplier_payment");
+                                        String supplier_account_id = parent.getString("account_id");
+                                        if (account_id.equals(supplier_account_id)) {
+
+                                            if (parent.isNull("status")) {
+                                                status = "null"; //Payment Confirmation Action
+                                            } else {
+                                                status = parent.getString("status"); //Received; Payment Recieved
+                                            }
+
+                                        } else {
+                                            status = "0"; // Payment Pending
+                                        }
+
                                     } else {
-                                        status = parent.getString("status");
+                                        status = "0"; // Payment Pending
                                     }
 
                                 } else {
-                                    status = "0";
+                                    status = "No Account Created"; //No Account
                                 }
+
                                 double initial_amount = Double.parseDouble(sub_total_amount) *
                                         Double.parseDouble(discount_amount);
                                 double final_amount = Double.parseDouble(sub_total_amount) - initial_amount;
 
                                 Model_Customer item = new Model_Customer(
+                                        order_id,
                                         order_reference,
                                         String.valueOf(df2.format(final_amount)),
                                         deliverydate,
@@ -211,6 +231,36 @@ public class Fragment_Transactions extends Fragment {
                     @Override
                     public void onErrorResponse(VolleyError error) {
                         Toast.makeText(getContext(), error.getMessage(),
+                                Toast.LENGTH_LONG).show();
+                    }
+                });
+
+        RequestQueue requestQueue = Volley.newRequestQueue(getContext());
+        requestQueue.add(req);
+    }
+
+    public void getAccountBalance() {
+
+        String URL = "http://172.16.10.202:8000/api/getCustomerTransaction/" + created_by;
+        StringRequest req = new StringRequest(Request.Method.GET, URL,
+                new Response.Listener<String>() {
+                    @Override
+                    public void onResponse(String response) {
+                        try {
+                            JSONObject jsonObject = new JSONObject(response);
+                            JSONArray jsonArray = jsonObject.getJSONArray("accounts");
+                            JSONObject innerObject = jsonArray.getJSONObject(0);
+                            String account_balance = innerObject.getString("account_balance");
+                            tv_balance.setText("Rs. " + account_balance);
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                },
+                new Response.ErrorListener() {
+                    @Override
+                    public void onErrorResponse(VolleyError error) {
+                        Toast.makeText(getContext(), error.getStackTrace().toString(),
                                 Toast.LENGTH_LONG).show();
                     }
                 });
